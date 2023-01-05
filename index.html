@@ -4,10 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Rock Paper Scissors</title>
 </head>
-<body>
-    
+<body class="bg-gray-200 select-none">
+    <!-- Scores -->
+    <div class="flex justify-center mt-20 mb-16 space-x-20">
+        <div class="flex space-x-4">
+            <div class="py-8 px-20 text-6xl text-slate-700 bg-slate-300 rounded-3xl border-4 border-slate-500">
+                Player
+            </div>
+            <div id="playerScore" class="py-8 px-20 text-6xl text-slate-600 bg-slate-300 rounded-3xl border-4 border-slate-500">
+                0
+            </div>
+        </div>
+        <div class="flex space-x-4">
+            <div class="py-8 px-20 text-6xl text-slate-700 bg-slate-300 rounded-3xl border-4 border-slate-500">
+                Computer
+            </div>
+            <div id="computerScore" class="py-8 px-20 text-6xl text-slate-600 bg-slate-300 rounded-3xl border-4 border-slate-500">
+                0
+            </div>
+        </div>
+    </div>
+    <!-- Emotes -->
+    <div class="flex justify-center space-x-64">
+        <div class="text-5xl text-slate-700">You: <i id="yourChoice" class="fa fa-2xl"></i></div>
+        <div class="text-5xl text-slate-700">Computer: <i id="computerChoice" class="fa fa-2xl"></i></div>
+    </div>
+    <!-- Winner -->
+    <div class="my-16 flex justify-center text-5xl text-slate-700" id="winner">
+
+    </div>
+    <!-- Status -->
+    <div class="flex justify-center items-center ">
+        <div id="status" class="px-20 h-20 w-3/5 text-6xl text-slate-700 bg-slate-300 rounded-3xl border-4 border-slate-500 text-center">
+            Make your decision
+        </div>
+    </div>
+    <!-- Player Buttons -->
+    <div class="flex justify-center items-center h-64 space-x-20">
+        <div>
+            <button id="rock" class="flex justify-around text-5xl bg-slate-700 py-5 px-10 w-80 text-white rounded-full hover:text-slate-700 hover:bg-slate-400 border-2 border-slate-600 duration-300">Rock<i class="fa fa-hand-rock"></i></button>
+        </div>
+        <div>
+            <button id="paper" class="flex justify-around text-5xl bg-slate-700 py-5 px-10 w-80 text-white rounded-full hover:text-slate-700 hover:bg-slate-400 border-2 border-slate-600 duration-300">Paper<i class="fa fa-hand-paper"></i></button>
+        </div>
+        <div>
+            <button id="scissors" class="flex justify-around text-5xl bg-slate-700 py-5 px-10 w-80 text-white rounded-full hover:text-slate-700 hover:bg-slate-400 border-2 border-slate-600 duration-300">Scissors<i class="fa fa-hand-scissors"></i></button>
+        </div>
+    </div>
+    <!-- Reset Button -->
+    <div class="flex justify-center">
+        <button id="reset" class="text-5xl bg-slate-400 py-5 px-10 w-64 text-slate-700 rounded-full hover:text-white hover:bg-slate-700 border-2 border-slate-600 duration-300">Reset</button>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
