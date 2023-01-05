@@ -90,9 +90,11 @@ function desicionClear() {
   document.getElementById("yourChoice").classList.remove("fa-hand-rock");
   document.getElementById("yourChoice").classList.remove("fa-hand-paper");
   document.getElementById("yourChoice").classList.remove("fa-hand-scissors");
+  document.getElementById("yourChoice").classList.remove("fa-question");
   document.getElementById("computerChoice").classList.remove("fa-hand-rock");
   document.getElementById("computerChoice").classList.remove("fa-hand-paper");
   document.getElementById("computerChoice").classList.remove("fa-hand-scissors");
+  document.getElementById("computerChoice").classList.remove("fa-question");
 }
 
 function scoreCounter() {
@@ -118,7 +120,9 @@ function restartGame() {
   document.querySelector("#playerScore").innerHTML = playerScore;
   document.querySelector("#winner").innerHTML = "";
   openButton();
-  desicionClear()
+  desicionClear();
+  document.getElementById("yourChoice").classList.add("fa-question");
+  document.getElementById("computerChoice").classList.add("fa-question");
 }
 
 function closeButton() {
