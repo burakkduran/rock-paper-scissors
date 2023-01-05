@@ -23,16 +23,16 @@ function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3) + 1;
   switch (randomNumber) {
     case 1:
-      computerChoice = "rock";
+      return computerChoice = "rock";
     case 2:
-      computerChoice = "paper";
+      return computerChoice = "paper";
     case 3:
-      computerChoice = "scissors";
+      return computerChoice = "scissors";
   }
 }
 
 function playRound(playerChoice) {
-  computerChoice = getComputerChoice();
+  getComputerChoice();
   if (computerChoice == playerChoice) {
     document.querySelector("#status").innerHTML = "Draw";
   } else if (computerChoice == "rock" && playerChoice == "scissors") {
@@ -58,7 +58,7 @@ function playRound(playerChoice) {
   scoreCounter();
   chooseWinner(playerScore , computerScore);
 
-  // desicionShower(playerChoice, computerChoice);
+  desicionShower(playerChoice, computerChoice);
 }
 
 function desicionShower(playerChoice , computerChoice) {
@@ -73,9 +73,9 @@ function desicionShower(playerChoice , computerChoice) {
 
   if (playerChoice == "rock") {
     document.getElementById("yourChoice").classList.add("fa-hand-rock");
-  } else if (computerChoice == "paper") {
+  } else if (playerChoice == "paper") {
     document.getElementById("yourChoice").classList.add("fa-hand-paper");
-  } else if (computerChoice == "scissors") {
+  } else if (playerChoice == "scissors") {
     document.getElementById("yourChoice").classList.add("fa-hand-scissors");
   } 
 
